@@ -4,16 +4,16 @@ M = M1 || M2 || ..... || Mn
 
 Usando un cifrario a blocchi
 
-				M1					M2
-				|						|
-				|   +-------+
-      +-+-+ |			+-+-+
-   K--+   | |	 K--+		|
-      +-+-+ |			+-+-+
-				|   |				|
-				+---+  			|
-				|  					|
-				C1					C2
+        M1          M2
+        |           |
+        |   +-------+
+      +-+-+ |     +-+-+
+   K--+   | |  K--+   |
+      +-+-+ |     +-+-+
+        |   |       |
+        +---+       |
+        |           |
+        C1          C2
 
 Nella versione robusta, l'ultimo blocco dovrebbe essere gestito in un modo diverso rispetto ai primi.
 
