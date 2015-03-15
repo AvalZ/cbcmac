@@ -1,0 +1,14 @@
+The (given) program calculate_mac.py calculates the AES CBC-MACs of a set of files (taking, as command line arguments,
+the name of the file containing an AES key and the input file names), and writes them to corresponding ".tag" files.
+Finally, verify_mac.py allows user to check whether a data-file and a tag-file match (using a given key).
+
+A random AES key can be generated using generate_aes_key.py; you do not need this file at all, but it could be handy
+to perform some experiments on your own.
+
+We provide two files (with their corresponding MACs): "homer_quote.txt", a text file containing a quote by Homer
+Simpsons, and "homer_alcohol.jpg", a binary file containing a JPEG image.
+
+Your job is to write a program that takes one or two files, and its/their associated MAC(s), and produces a different
+file with a MAC equal to one or the other. In particular, you have to forge the "homer*" files.
+
+Hint: consider what happens by appending data to a file with a known MAC.

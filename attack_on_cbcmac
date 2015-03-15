@@ -1,0 +1,29 @@
+Funzionamento del CBC-MAC
+
+M = M1 || M2 || ..... || Mn
+
+Usando un cifrario a blocchi
+
+				M1					M2
+				|						|
+				|   +-------+
+      +-+-+ |			+-+-+
+   K--+   | |	 K--+		|
+      +-+-+ |			+-+-+
+				|   |				|
+				+---+  			|
+				|  					|
+				C1					C2
+
+Nella versione robusta, l'ultimo blocco dovrebbe essere gestito in un modo diverso rispetto ai primi.
+
+Qui non lo facciamo!!!!
+
+Questo rende vulnerabile il mac ad un attacco di falsificazione esistenziale.
+
+Dopo aver ricevuto due coppie (M, t) (M', t'),
+posso creare un nuovo messaggio concatenando M e M', modificando leggermente il secondo:
+
+M'' = M1...Mn||(Cn^M'1)M'2...M'n
+ottenendo t'' = t'
+
